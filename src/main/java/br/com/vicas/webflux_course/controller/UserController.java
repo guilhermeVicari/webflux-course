@@ -1,5 +1,7 @@
 package br.com.vicas.webflux_course.controller;
 
+import br.com.vicas.webflux_course.model.request.UserRequest;
+import br.com.vicas.webflux_course.model.response.UserResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -17,7 +19,7 @@ public interface UserController {
     ResponseEntity<Flux<UserResponse>> findAll();
 
     @PatchMapping(value = "/{id}")
-    ResponseEntity<Mono<UserResponse>> update(@PathVariable String id, @RequestBody UserRquest request);
+    ResponseEntity<Mono<UserResponse>> update(@PathVariable String id, @RequestBody UserRequest request);
 
     @DeleteMapping(value = "/{id}")
     ResponseEntity<Mono<Void>> delele(@PathVariable String id);
