@@ -1,6 +1,7 @@
 package br.com.vicari.webflux_course.entity.controller;
 
-import br.com.vicari.webflux_course.entity.User;
+import br.com.vicari.webflux_course.model.request.UserRequest;
+import br.com.vicari.webflux_course.model.response.UserResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
